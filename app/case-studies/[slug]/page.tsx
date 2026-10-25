@@ -6,7 +6,6 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { DesignPrompt } from "@/components/design-prompt";
 import { JsonLd } from "@/components/json-ld";
 import {
-  ArrowRight,
   Blueprint,
   CheckCircle,
   Clock,
@@ -15,7 +14,6 @@ import {
   Target,
 } from "@/components/icons";
 import { caseStudies, getCaseStudy } from "@/lib/case-studies";
-import { getSystemDesignModule } from "@/lib/system-design";
 import { canonical, ogImage, siteConfig } from "@/lib/site";
 
 export const dynamicParams = false;
@@ -66,9 +64,6 @@ export default async function CaseStudyPage({
   const index = caseStudies.findIndex((entry) => entry.slug === study.slug);
   const previous = index > 0 ? caseStudies[index - 1] : undefined;
   const next = index < caseStudies.length - 1 ? caseStudies[index + 1] : undefined;
-  const related = study.relatedModules
-    .map((moduleSlug) => getSystemDesignModule(moduleSlug))
-    .filter((module): module is NonNullable<typeof module> => Boolean(module));
 
   const jsonLd = {
     "@context": "https://schema.org",

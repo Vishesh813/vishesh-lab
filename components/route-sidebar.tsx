@@ -51,33 +51,16 @@ export function RouteSidebar({
     activeGroupId ? [activeGroupId] : [],
   );
   const [mobileOpen, setMobileOpen] = useState(false);
-
-  const toggleMobile = () => setMobileOpen((v) => !v);
-  const [collapsed, setCollapsed] = useState(false);
-  const [mounted, setMounted] = useState(false);
-
   const storageKey = `vishesh-lab.route-sidebar.${ariaLabel}.collapsed.v2`;
 
-  useEffect(() => {
+  const [collapsed, setCollapsed] = useState(() => {
+    if (typeof window === "undefined") return false;
     try {
-      const stored = window.localStorage.getItem(storageKey);
-      if (stored === "true") setCollapsed(true);
-      setMounted(true);
+      return window.localStorage.getItem(storageKey) === "true";
     } catch {
-      setMounted(true);
+      return false;
     }
-  }, [storageKey]);
-
-  useEffect(() => {
-    if (!mounted) return;
-    try {
-      window.localStorage.setItem(storageKey, String(collapsed));
-    } catch {
-      // Ignore storage failures.
-    }
-    const shell = document.querySelector(".route-shell");
-    if (shell) shell.classList.toggle("is-collapsed", collapsed);
-  }, [collapsed, storageKey, mounted]);
+  });
 
   useEffect(() => {
     if (!mobileOpen) return;
@@ -96,8 +79,19 @@ export function RouteSidebar({
   const closeMobile = () => setMobileOpen(false);
 
   const toggleCollapsed = () => {
-    if (window.innerWidth <= 1024) setMobileOpen(true);
-    else setCollapsed((value) => !value);
+    if (window.innerWidth <= 1024) {
+      setMobileOpen(true);
+    } else {
+      setCollapsed((value) => {
+        const next = !value;
+        try {
+          window.localStorage.setItem(storageKey, String(next));
+        } catch {
+          // Ignore storage failures.
+        }
+        return next;
+      });
+    }
   };
 
   const toggleGroup = (id: string) => {
@@ -217,8 +211,8 @@ export function RouteSidebar({
       <button
         type="button"
         className="route-mobile-trigger"
-        onClick={toggleMobile}
-        aria-label={`Toggle ${ariaLabel}`}
+        onClick={() => setMobileOpen(true)}
+        aria-label={`Open ${ariaLabel}`}
         aria-expanded={mobileOpen}
       >
         <Menu width={16} height={16} aria-hidden="true" />
