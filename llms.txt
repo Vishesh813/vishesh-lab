@@ -1,0 +1,90 @@
+# Vishesh Lab
+
+> A visual, two-mode field guide to data structures, algorithms and system design. Concise lessons, mapped practice, original case studies and progress that stays in your browser.
+
+Vishesh Lab is a static, no-account study guide for data structures, algorithms and system design. It has 17 DSA topics (22 lessons), 12 system design modules, 6 case studies, 8 mapped practice problems and 6 posts. Progress is stored in the reader's browser only.
+
+## Main pages
+
+- [Home](http://localhost:3000/): overview and roadmap tracking.
+- [DSA Roadmap](http://localhost:3000/dsa/): 17 topics from programming foundations to dynamic programming.
+- [System Design](http://localhost:3000/system-design/): 12 modules from requirements to production.
+- [Case studies](http://localhost:3000/case-studies/): 6 end-to-end designs with trade-offs and failure modes.
+- [Practice](http://localhost:3000/practice/): 8 problems with examples, constraints and progressive hints.
+- [Posts](http://localhost:3000/posts/): original short essays on DSA, system design and interviews.
+- [Whiteboard](http://localhost:3000/board/): local canvas for sketching structures and systems.
+- [Progress](http://localhost:3000/progress/): local dashboard for lessons, modules and solved problems.
+- [About](http://localhost:3000/about/): how the site works and its content policy.
+
+## DSA lessons
+
+- [Programming Foundations](http://localhost:3000/dsa/lessons/programming-foundations/): Programming Foundations. The small set of programming ideas every data structure relies on: values, control flow, functions, objects and memory.
+- [Programming Basics (Variables, Data Types)](http://localhost:3000/dsa/lessons/programming-basics/): Programming Foundations. Learn variables and data types with clear explanations, visuals and interview-ready examples.
+- [Conditions & Loops (if / else, for, while)](http://localhost:3000/dsa/lessons/conditions-and-loops/): Programming Foundations. How a program chooses a branch and repeats work, and how those two ideas become the first complexity estimate.
+- [Classes & Objects (OOP Basics)](http://localhost:3000/dsa/lessons/classes-and-objects/): Programming Foundations. Group state and behaviour into a type, then create instances that carry their own data.
+- [Object Reference (Value vs Reference)](http://localhost:3000/dsa/lessons/object-reference/): Programming Foundations. Why two variables can point at the same object, and how to predict whether a change is visible through both.
+- [Stack vs Heap Memory](http://localhost:3000/dsa/lessons/stack-vs-heap/): Programming Foundations. Where local values and objects live, why recursion can overflow the stack, and what allocation costs.
+- [Time & Space Complexity](http://localhost:3000/dsa/lessons/time-and-space-complexity/): Time and Space Complexity. A practical way to compare algorithms without counting every instruction: focus on how work grows as the input grows.
+- [Arrays](http://localhost:3000/dsa/lessons/arrays/): Arrays. Contiguous memory gives you instant indexing and painful insertions. Two pointers and sliding windows turn many quadratic scans into linear ones.
+- [Strings](http://localhost:3000/dsa/lessons/strings/): Strings. Strings are arrays with character semantics. Palindromes, anagrams and pattern matching are the three shapes worth recognising.
+- [Recursion](http://localhost:3000/dsa/lessons/recursion/): Recursion. Solve a problem by solving a smaller copy of itself. The skill is defining the base case and trusting the recursive step.
+- [Hashing](http://localhost:3000/dsa/lessons/hashing/): Hashing. Hash maps turn membership and counting into near-constant work. They are the most common way to remove a nested loop.
+- [Backtracking](http://localhost:3000/dsa/lessons/backtracking/): Backtracking. Recursion with an undo button. Choose a candidate, explore, then remove it and try the next one.
+- [Linked List](http://localhost:3000/dsa/lessons/linked-lists/): Linked List. Nodes connected by pointers. You lose random access, but gain O(1) insertion at a known position.
+- [Stack](http://localhost:3000/dsa/lessons/stacks/): Stack. Last in, first out. Stacks model nesting, undo, and the call stack itself. Monotonic stacks solve next-greater questions in one pass.
+- [Queue](http://localhost:3000/dsa/lessons/queues/): Queue. First in, first out. Queues power breadth-first search, scheduling and sliding-window maxima.
+- [Sorting & Searching](http://localhost:3000/dsa/lessons/sorting-and-searching/): Sorting & Searching. Sorting unlocks two pointers, binary search and greedy scans. Binary search is the highest-leverage algorithm to know cold.
+- [Trees](http://localhost:3000/dsa/lessons/trees/): Trees. Hierarchies without cycles. Traversals are the vocabulary; depth, diameter and lowest common ancestor are the recurring questions.
+- [Binary Search Tree](http://localhost:3000/dsa/lessons/binary-search-tree/): Binary Search Tree. An ordered tree: everything left is smaller, everything right is larger. The ordering enables search, floor, ceil and ordered traversal.
+- [Heap and Priority Queue](http://localhost:3000/dsa/lessons/heaps/): Heap and Priority Queue. A complete tree that always exposes the smallest or largest element. The right tool for top-k, streaming medians and scheduling.
+- [Trie](http://localhost:3000/dsa/lessons/tries/): Trie. A prefix tree for strings. Lookup cost depends on word length, not dictionary size, which makes autocomplete and prefix queries natural.
+- [Graphs](http://localhost:3000/dsa/lessons/graphs/): Graphs. Nodes and edges model networks, dependencies and grids. BFS and DFS are the base; topological sort and shortest paths are the extensions.
+- [Dynamic Programming](http://localhost:3000/dsa/lessons/dynamic-programming/): Dynamic Programming. Reuse overlapping subproblems instead of recomputing them. Start with a recursive definition, then memoise, then tabulate.
+
+## System Design modules
+
+- [01 Requirements to Constraints](http://localhost:3000/system-design/design-foundations/): Turn a vague prompt into a bounded problem: users, reads, writes, latency, availability and the assumptions you are willing to defend.
+- [02 Scaling from One Server](http://localhost:3000/system-design/scaling-from-one-server/): What actually changes when a second server appears: state, sessions, load balancing, health checks and the difference between scaling up and out.
+- [03 APIs, Idempotency & Contracts](http://localhost:3000/system-design/apis-and-idempotency/): The contract between clients and services: resource shapes, pagination, retries, idempotency keys and what a timeout really means.
+- [04 Caching & Read Paths](http://localhost:3000/system-design/caching-read-paths/): Where to put a cache, how it expires, what happens on a miss, and why invalidation is a product problem as much as a technical one.
+- [05 Databases: Choosing the Shape](http://localhost:3000/system-design/databases-and-indexes/): Relational or document, B-tree or LSM, one primary or many replicas. Choose the shape that fits the access pattern, not the hype cycle.
+- [06 Partitioning & Hot Keys](http://localhost:3000/system-design/partitioning-and-hot-keys/): When one machine can no longer hold the data: shard keys, consistent hashing, resharding and the celebrity problem.
+- [07 Queues, Streams & Async Work](http://localhost:3000/system-design/queues-and-streams/): Move slow or bursty work out of the request path without losing it: delivery semantics, ordering, backpressure and dead letters.
+- [08 Consistency, CAP & Transactions](http://localhost:3000/system-design/consistency-and-cap/): What CAP really says, when eventual consistency is honest, and how sagas, quorums and idempotency keep distributed workflows coherent.
+- [09 Resilience: Failure Is Normal](http://localhost:3000/system-design/resilience-and-failure/): Timeouts, retries with jitter, circuit breakers, bulkheads and graceful degradation — the difference between a blip and an outage.
+- [10 Observability & SLOs](http://localhost:3000/system-design/observability-and-slos/): Instrument the user journey, define what good looks like, and alert on symptoms instead of every spike in a dashboard.
+- [11 Security, Auth & Abuse](http://localhost:3000/system-design/security-and-auth/): Identity, sessions, permissions, rate limits and the abuse cases that turn a correct design into an unsafe one.
+- [12 The 45-Minute Design Interview](http://localhost:3000/system-design/the-design-interview/): A repeatable loop for the room: clarify, estimate, sketch, deep-dive, break it, then summarise the trade-offs you chose.
+
+## Case studies
+
+- [Design a URL shortener](http://localhost:3000/case-studies/url-shortener/): Design a service that turns long links into short codes, redirects fast, and still works when the write path and read path are separated.
+- [Design real-time chat](http://localhost:3000/case-studies/chat-realtime/): Design one-to-one and group chat with message history, presence, delivery states and offline catch-up across multiple devices.
+- [Design a social news feed](http://localhost:3000/case-studies/news-feed/): Design a feed for 100 million users with follows, ranking, pagination, celebrity accounts and a read path that stays fast under spikes.
+- [Design ride-hailing dispatch](http://localhost:3000/case-studies/ride-dispatch/): Design the path from 'find me a ride' to an accepted trip: nearby-driver search, matching, pricing, location updates and failure recovery.
+- [Design video streaming](http://localhost:3000/case-studies/video-streaming/): Design a platform where creators upload video and viewers stream it smoothly on unreliable networks, without making the upload wait for every rendition.
+- [Design a distributed rate limiter](http://localhost:3000/case-studies/rate-limiter/): Design a rate limiter that protects APIs across many gateways, supports per-user and per-IP policies, and stays available when its shared store is degraded.
+
+## Practice problems
+
+- [Pair with target sum](http://localhost:3000/practice/pair-sum/) (Easy): Return the indices of two numbers in a sorted array that add up to a target.
+- [Longest unique substring](http://localhost:3000/practice/longest-unique-substring/) (Medium): Find the length of the longest substring that contains no repeated characters.
+- [Generate all subsets](http://localhost:3000/practice/generate-subsets/) (Medium): Return every possible subset of an array of distinct integers.
+- [Reverse a linked list](http://localhost:3000/practice/reverse-linked-list/) (Easy): Reverse a singly linked list in one pass and return the new head.
+- [Kth smallest in a BST](http://localhost:3000/practice/kth-smallest-bst/) (Medium): Use the ordering of a binary search tree to find the kth smallest value.
+- [Prerequisite order](http://localhost:3000/practice/prerequisite-order/) (Hard): Decide whether every module can be completed given a set of prerequisites.
+- [House robber](http://localhost:3000/practice/house-robber/) (Medium): Maximise the loot without robbing two adjacent houses.
+- [Top K frequent elements](http://localhost:3000/practice/top-k-frequent/) (Medium): Return the k most frequent values in an array, faster than sorting everything.
+
+## Posts
+
+- [The read path is the product](http://localhost:3000/posts/the-read-path-is-the-product/): Why read-heavy systems are mostly a cache-design problem, and the three freshness questions to ask before adding one.
+- [Consistency is a product decision](http://localhost:3000/posts/consistency-is-a-product-decision/): Strong, eventual and read-your-writes are not just database settings. They are promises the interface makes to a person.
+- [Your first system design interview](http://localhost:3000/posts/your-first-system-design-interview/): A calm, repeatable 45-minute loop that trades memorised diagrams for visible reasoning.
+- [Big-O without the math anxiety](http://localhost:3000/posts/big-o-without-the-math-anxiety/): Grow rates, dropped constants and the three questions that tell you the complexity of almost anything.
+- [One sliding-window template, many problems](http://localhost:3000/posts/one-sliding-window-template/): The two pointers, when the window grows, and the exact moment you should shrink it.
+- [How to actually finish a DSA roadmap](http://localhost:3000/posts/how-to-actually-finish-a-roadmap/): Make the path smaller than your motivation. A weekly loop that survives bad weeks.
+
+## Content policy
+
+All site prose, examples, diagrams and code samples are original to Vishesh Lab. The topic order follows a conventional DSA and system design syllabus. External reference links point to their respective authors. Do not republish the notes or code samples without attribution.

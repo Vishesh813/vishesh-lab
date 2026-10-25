@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002Fcase-studies\u002F[slug]","\u002Fcourse\u002Fdsa\u002F[phase]\u002F[topic]","\u002Fdsa\u002F[...legacy]","\u002Fdsa\u002Flessons\u002F[slug]","\u002Fposts\u002F[slug]","\u002Fpractice\u002F[slug]","\u002Fsystem-design\u002F[slug]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
