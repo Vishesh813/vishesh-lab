@@ -59,12 +59,12 @@ export function RouteSidebar({
   const storageKey = `vishesh-lab.route-sidebar.${ariaLabel}.collapsed.v2`;
 
   useEffect(() => {
-    setMounted(true);
     try {
       const stored = window.localStorage.getItem(storageKey);
       if (stored === "true") setCollapsed(true);
+      setMounted(true);
     } catch {
-      // Ignore storage failures.
+      setMounted(true);
     }
   }, [storageKey]);
 
