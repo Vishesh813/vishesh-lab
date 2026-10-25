@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a78bfa"/>
+      <stop offset="0.55" stop-color="#8b5cf6"/>
+      <stop offset="1" stop-color="#4f46e5"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="180" cy="60" r="560" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8b5cf6" stop-opacity="0.34"/>
+      <stop offset="0.55" stop-color="#6d28d9" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#05060a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="1070" cy="610" r="520" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.20"/>
+      <stop offset="0.55" stop-color="#0e7490" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#05060a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a78bfa" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0.20"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8b5cf6" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#8b5cf6" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path d="M44 0H0V44" fill="none" stroke="#ffffff" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+    <filter id="nodeGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="#05060a"/>
+  <rect width="1200" height="630" fill="url(#glowA)"/>
+  <rect width="1200" height="630" fill="url(#glowB)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <path d="M0 0H1200" stroke="url(#line)" stroke-width="1"/>
+
+  <!-- Brand -->
+  <g>
+    <rect x="80" y="64" width="44" height="44" rx="12" fill="url(#brand)"/>
+    <g transform="translate(90 74) scale(1)" fill="none" stroke="#ffffff" stroke-width="1.7" stroke-linecap="round">
+      <path d="M8 3H7a3 3 0 0 0-3 3v3a3 3 0 0 1-2 3 3 3 0 0 1 2 3v3a3 3 0 0 0 3 3h1M16 3h1a3 3 0 0 1 3 3v3a3 3 0 0 0 2 3 3 3 0 0 0-2 3v3a3 3 0 0 1-3 3h-1"/>
+    </g>
+    <text x="140" y="98" font-family="Segoe UI, Arial, sans-serif" font-size="29" font-weight="600" letter-spacing="-0.8" fill="#f4f4f5">Algo<tspan fill="#71717a">Atlas</tspan></text>
+  </g>
+
+  <!-- Top right label -->
+  <g>
+    <rect x="886" y="70" width="234" height="38" rx="19" fill="#8b5cf6" fill-opacity="0.07" stroke="#a78bfa" stroke-opacity="0.22"/>
+    <circle cx="907" cy="89" r="3.5" fill="#22d3ee"/>
+    <text x="923" y="94" font-family="Consolas, monospace" font-size="11" letter-spacing="2.2" fill="#a1a1aa">A VISUAL FIELD GUIDE</text>
+  </g>
+
+  <!-- Headline -->
+  <text x="80" y="246" font-family="Segoe UI, Arial, sans-serif" font-size="76" font-weight="600" letter-spacing="-3.6" fill="#f4f4f5">Learn the <tspan font-family="Georgia, Times New Roman, serif" font-style="italic" font-weight="400" letter-spacing="-1.5" fill="#c4b5fd">shape</tspan></text>
+  <text x="80" y="328" font-family="Segoe UI, Arial, sans-serif" font-size="76" font-weight="600" letter-spacing="-3.6" fill="#f4f4f5">of algorithms.</text>
+
+  <text x="80" y="386" font-family="Segoe UI, Arial, sans-serif" font-size="23" fill="#a1a1aa">A visual field guide to data structures and algorithms.</text>
+  <text x="80" y="420" font-family="Segoe UI, Arial, sans-serif" font-size="19" fill="#71717a">Seventeen modules. Eight problems. Progress that stays local.</text>
+
+  <!-- CTA -->
+  <g>
+    <rect x="80" y="458" width="256" height="50" rx="25" fill="#8b5cf6" fill-opacity="0.14" stroke="#8b5cf6" stroke-opacity="0.5"/>
+    <text x="106" y="489" font-family="Consolas, monospace" font-size="13" letter-spacing="1.6" fill="#ddd6fe">START THE ATLAS</text>
+    <path d="M300 483h14m-5-5 5 5-5 5" fill="none" stroke="#ddd6fe" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Footer stats -->
+  <g font-family="Consolas, monospace" font-size="12" letter-spacing="2" fill="#52525b">
+    <text x="80" y="580">17 MODULES</text>
+    <circle cx="208" cy="576" r="2" fill="#3f3f46"/>
+    <text x="228" y="580">8 PROBLEMS</text>
+    <circle cx="356" cy="576" r="2" fill="#3f3f46"/>
+    <text x="376" y="580">3 FIELD NOTES</text>
+    <circle cx="524" cy="576" r="2" fill="#3f3f46"/>
+    <text x="544" y="580">LOCAL PROGRESS</text>
+  </g>
+
+  <!-- Constellation -->
+  <g>
+    <circle cx="940" cy="318" r="196" fill="#0b0d17" fill-opacity="0.55" stroke="#ffffff" stroke-opacity="0.06"/>
+    <circle cx="940" cy="318" r="152" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-dasharray="3 7"/>
+    <circle cx="940" cy="318" r="104" fill="none" stroke="#8b5cf6" stroke-opacity="0.18"/>
+
+    <g stroke="url(#beam)" stroke-width="1.2" fill="none" opacity="0.9">
+      <path d="M940 318 940 146M940 318 1090 224M940 318 1102 400M940 318 940 490M940 318 790 400M940 318 778 224"/>
+      <path d="M940 146 1090 224 1102 400 940 490 790 400 778 224Z" stroke-opacity="0.4"/>
+    </g>
+
+    <g filter="url(#nodeGlow)">
+      <circle cx="940" cy="146" r="7" fill="#a78bfa"/>
+      <circle cx="1090" cy="224" r="6" fill="#8b5cf6"/>
+      <circle cx="1102" cy="400" r="6" fill="#22d3ee"/>
+      <circle cx="940" cy="490" r="7" fill="#a78bfa"/>
+      <circle cx="790" cy="400" r="6" fill="#22d3ee"/>
+      <circle cx="778" cy="224" r="6" fill="#8b5cf6"/>
+    </g>
+
+    <g font-family="Consolas, monospace" font-size="11" letter-spacing="1.8" fill="#8b8b96">
+      <text x="958" y="140">ARRAYS</text>
+      <text x="1106" y="218">GRAPHS</text>
+      <text x="1118" y="405">DP</text>
+      <text x="958" y="497">TREES</text>
+    </g>
+
+    <!-- Center mark -->
+    <g filter="url(#softShadow)">
+      <rect x="892" y="270" width="96" height="96" rx="26" fill="url(#brand)"/>
+      <g transform="translate(906 284) scale(2.8)" fill="none" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round">
+        <path d="M8 3H7a3 3 0 0 0-3 3v3a3 3 0 0 1-2 3 3 3 0 0 1 2 3v3a3 3 0 0 0 3 3h1M16 3h1a3 3 0 0 1 3 3v3a3 3 0 0 0 2 3 3 3 0 0 0-2 3v3a3 3 0 0 1-3 3h-1"/>
+        <path d="M12 8v8m0 0-4 4m4-4 4 4" stroke-width="1.2" stroke-opacity="0.85"/>
+      </g>
+      <circle cx="940" cy="306" r="3.2" fill="#ffffff"/>
+      <circle cx="928" cy="329" r="3.2" fill="#ffffff" fill-opacity="0.8"/>
+      <circle cx="951" cy="329" r="3.2" fill="#ffffff" fill-opacity="0.8"/>
+    </g>
+  </g>
+</svg>
